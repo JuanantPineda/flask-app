@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   flask-app:
-    image: juanantpineda/flask-app  # Usa el nombre de la imagen que creaste
+    image: juanantpineda/flask-app:latest  # Usa el nombre de la imagen que creaste
     container_name: flask-app
     ports:
       - "5002:5002"  # Mapea el puerto del contenedor al host
