@@ -64,7 +64,7 @@ pipeline {
                 stage ('Despliegue django_publicaciones'){
                     steps{
                         sshagent(credentials : ['SSH_KEY']) {
-                        sh 'ssh -o StrictHostKeyChecking=no debian@luffy.juanpiece.es "cd flask-app && git pull && docker-compose down && docker pull juanantpineda/flask-app:latest && docker-compose up -d"'
+                        sh 'ssh -o StrictHostKeyChecking=no debian@luffy.juanpiece.es "cd flask-app && git pull && docker-compose down -v && docker pull juanantpineda/flask-app:latest && docker-compose up -d"'
                         }
                     }
                 }
