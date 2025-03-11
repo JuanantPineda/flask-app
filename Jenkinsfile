@@ -15,7 +15,7 @@ pipeline {
             stages {
                 stage('Clonando el repositorio') {
                     steps {
-                        git branch:'master',url:'https://github.com/JuanantPineda/flask-app.git'
+                        git branch:'main',url:'https://github.com/JuanantPineda/flask-app.git'
                     }
                 }
                 stage('Instalacion del requirements.txt') {
