@@ -30,7 +30,7 @@ def test_nombre_env(client, monkeypatch):
     monkeypatch.setenv("NOMBRE", "TestUser")
     response = client.get("/")
     assert response.status_code == 200
-    assert "App de: TestUse" in response.text
+    assert "App de: TestUser" in response.text
     
 @pytest.fixture
 def client():
